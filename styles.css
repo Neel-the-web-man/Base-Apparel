@@ -1,0 +1,233 @@
+*, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.container .sec-1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom 280px;
+}
+
+.container .bg-girl {
+    background-image: url(./images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 40%;
+    min-height: 100vh;
+    max-height: 600px;
+}
+
+.bs-aprl-div {
+    position: relative;
+    width: 430px;
+    right: 60px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.bs-aprl {
+    width: 150px;
+    height: 30px;
+}
+
+.info-and-email-captcher {
+    margin-top: auto;
+    height: 100%;
+    position: relative;
+    right: 60px;
+}
+
+.main-heading {
+    letter-spacing: 10px;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.main-heading :nth-child(1) {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.main-heading :nth-child(3), .main-heading :nth-child(2) {
+    font-weight: 600;
+}
+
+.para {
+    margin: 20px 0px 30px 0px;
+    font-size: 1.5rem;
+    color: hsl(0, 36%, 70%);
+    width: 430px;
+    line-height: 22px;
+}
+
+.em-div {
+    width: 100%;
+    position: relative;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 6%, 24%);
+    border: 0.7px solid grey;
+    outline: none;
+    padding: 13px;
+    height: 45px;
+    width: 370px;
+    border-radius: 30px;
+}
+
+input::placeholder {
+    color: rgb(194, 194, 194);
+}
+
+.span-invalid-red{
+    display: block;
+    color:hsl(0, 93%, 68%);
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.icon-error-svg{
+    position: absolute;
+    right:95px;
+    bottom: 10px;
+}
+
+.arw-icn-btn {
+    background: linear-gradient( hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 80px;
+    height: 45px;
+    border-radius: 30px;
+    display: inline-block;
+    border: 0.5px grey;
+    position: absolute;
+    right: 10px;
+    transition: all 0.3s ease;
+}
+
+.arw-icn-btn:hover {
+    transform: scale(1.1);
+}
+.arrow-icon-svg {
+    width: 10%;
+    height: 15px;
+    z-index: 20;
+}
+
+/* width queries */
+
+@media screen and (max-width:950px) {
+    .info-and-email-captcher, .bs-aprl-div {
+        right: 0px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .container .bg-girl {
+        margin-top: 100px;
+        width: 100%;
+        background-image: url("./images/hero-mobile.jpg");
+        background-size: 63% 300px;
+        min-height: 300px;
+    }
+    .bs-aprl-div {
+        position: absolute;
+        top: 0px;
+        margin-top: 30px;
+        left: auto;
+        right: auto;
+    }
+    .sec-1 {
+        min-width: 100%;
+        height: 320px;
+        margin: 30px 0px;
+    }
+    .main-heading, .para {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .container .bg-girl{
+        background-size: 70% 300px;
+    }
+}
+@media screen and (max-width:500px) {
+    .container .bg-girl{
+        background-size: 100% 270px;
+    }
+}
+@media screen and (max-width:450px) {
+    .bs-aprl-div{
+        width: 80%;
+    }
+    .main-heading{
+        width: 80%;
+        margin: auto;
+    }
+    .para{
+        width: 80%;
+        margin: 10px auto 30px auto;
+    }
+    .em-div{
+        width:  80%;
+        margin: auto;
+    }
+    .icon-error-svg{
+        right: 60px;
+    }
+    .arw-icn-btn{
+        position: absolute;
+        bottom: 11px;
+        right: 0%;
+        width: 15%;
+    }
+    .arw-icn-btn-bottom{
+        bottom: 0px;
+    }
+    .input{
+        width: 100%;
+    }
+    .span-invalid-red{
+        width: 70%;
+    }
+}
+/* height queries */
+@media screen and (max-height:490px) {
+    .bs-aprl-div {
+        min-height: 40px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-height:491px) and (max-height:580px) {
+    .bs-aprl-div {
+        min-height: 50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
